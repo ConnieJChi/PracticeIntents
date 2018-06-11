@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     public void clicked(View v){
         Intent i = new Intent(Intent.ACTION_SENDTO);
         i.setData(Uri.parse("mailto:"));
-        i.setType("*/*");
         i.putExtra(i.EXTRA_SUBJECT, "Happiness!");
         i.putExtra(i.EXTRA_TEXT, "Happiness is a virtue!");
         if (i.resolveActivity(getPackageManager()) != null) {
